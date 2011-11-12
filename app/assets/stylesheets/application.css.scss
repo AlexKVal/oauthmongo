@@ -1,0 +1,31 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+*/
+
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+  
+  li {
+    display: inline;
+  }
+}
+
+@mixin flash($back_color, $border_color) {
+  padding: 5px 8px;
+  margin: 10px 0;
+  background-color: $back_color;
+  border: solid 1px $border_color;
+}
+
+#flash_notice {
+  @include flash(#CFC, #6C6);  
+}
+
+#flash_alert {
+  @include flash(#FCC, #C66);  
+}
